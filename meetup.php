@@ -65,6 +65,8 @@ class Meetup {
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
 		curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept-Charset: utf-8"));
+		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 1);
+    		curl_setopt($ch, CURLOPT_TIMEOUT, 2);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
